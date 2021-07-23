@@ -1,0 +1,557 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::focus,
+::active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html ::-webkit-scrollbar {
+  width: 0px;
+}
+
+input,
+.form .submit-button,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear,
+.form .submit-button::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  font-family: 'Heebo med';
+  background: white;
+  z-index: 5;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 50px;
+  width: 95%;
+}
+
+.navmenu__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.navmenu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navmenu__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px 0px 10px;
+  line-height: 1.2;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.navmenu__list li:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.navmenu__list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.navmenu #submenu-open-button {
+  position: relative;
+}
+
+.navmenu #submenu-open-button::after {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  right: -5px;
+  content: "";
+  height: 4px;
+  width: 4px;
+  border-top: 1.5px solid white;
+  border-right: 1.5px solid white;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.navmenu #submenu-open-button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.navmenu #submenu-open-button.active::after {
+  top: 1px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.navmenu__submenu {
+  display: none;
+  height: 50px;
+  background: gray;
+}
+
+.navmenu__submenu.show {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navmenu__submenu.navmenu__list li:hover {
+  -webkit-filter: brightness(87%);
+          filter: brightness(87%);
+}
+
+.logo {
+  z-index: 5;
+  height: 99%;
+}
+
+.logo img {
+  height: 100%;
+  width: 50px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 180px;
+  font-family: Heebo;
+  color: black;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-block {
+  margin: 0px 10px 0px 0px;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 0px 20px 0px;
+}
+
+.socials__item {
+  height: 20px;
+  width: 20px;
+  margin: 0px 20px 0px 0px;
+}
+
+.socials .twitter {
+  height: 20px;
+  width: 26px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 5px 30px 5px;
+}
+
+.form i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form i::before {
+  position: relative;
+  left: 15px;
+  width: 0;
+  z-index: 1;
+}
+
+.form input,
+.form .submit-button {
+  height: 35px;
+  width: 210px;
+  font-size: calc(10px + 1 * ((100vw - 320px) / 530));
+  font-family: "Open Sans";
+  padding: 10px 10px 10px 30px;
+  margin: 8px 0px 8px 6px;
+  border-radius: 2px;
+}
+
+.form input:focus,
+.form .submit-button:focus {
+  -webkit-filter: brightness(83%);
+          filter: brightness(83%);
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.form .submit-button {
+  padding: 0px 0px 0px 0px;
+  width: 160px;
+}
+
+.form .submit-button:hover {
+  color: black;
+}
+
+.form .submit-button:active {
+  color: black;
+}
+
+.form .submit-button:focus {
+  -webkit-filter: none;
+          filter: none;
+  background: #ebb14d;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: "Lato";
+  text-transform: uppercase;
+  font-size: calc(10px + -1 * ((100vw - 320px) / 530));
+  min-width: 80px;
+  height: 7px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 1px;
+  background-color: #ebb14d;
+}
+
+.button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  color: black;
+  -webkit-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
+}
+
+a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: white;
+}
+
+.button-container .button {
+  position: relative;
+  bottom: 2px;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.button-container .button:active {
+  bottom: 0;
+}
+
+@font-face {
+  font-family: "Heebo black";
+  font-display: swap;
+  src: url("../fonts/Heebo-Black.woff") format("woff"), url("../fonts/Heebo-Black.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo bold";
+  font-display: swap;
+  src: url("../fonts/Heebo-Bold.woff") format("woff"), url("../fonts/Heebo-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo med";
+  font-display: swap;
+  src: url("../fonts/Heebo-Medium.woff") format("woff"), url("../fonts/Heebo-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heebo";
+  font-display: swap;
+  src: url("../fonts/Heebo-Regular.woff") format("woff"), url("../fonts/Heebo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 100%;
+  color: black;
+  font-family: Roboto;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100vh;
+          flex: 1 0 100vh;
+  background: white;
+}
+
+.main__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  background: white;
+}
+
+@media (min-width: 1200px) {
+  .footer__body {
+    width: 80%;
+  }
+
+  .container {
+    height: auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer__body {
+    width: 90%;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer__body {
+    width: 700px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .footer__body {
+    width: 90%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
+  .form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  .form input,
+  .form .submit-button,
+  .form i,
+  .form .button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1199px) {
+  .container {
+    width: 850px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 850px) {
+  .container {
+    width: 80%;
+  }
+}

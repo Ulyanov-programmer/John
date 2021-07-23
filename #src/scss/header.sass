@@ -1,0 +1,105 @@
+@import "mixins"
+$background: white
+$maxWidth: 850
+
+.header
+    display: flex
+    justify-content: center
+    color: black
+    font-family: 'Heebo med'
+
+    background: $background
+    z-index: 5
+
+    &__body
+        display: flex
+        justify-content: flex-end
+        @include hAndW(50px, 95%)
+
+        // background: $background 
+        // filter: brightness(110%) 
+
+.navmenu
+    &__body
+        display: flex
+        height: 100%
+
+    &__list
+        display: flex
+
+        li
+            display: flex
+
+            justify-content: center
+            align-items: center
+            padding: 0px 10px 0px 10px
+
+            line-height: 1.2
+            background: white
+
+            cursor: pointer
+            transition: all 0.2s ease 0s
+
+            &:hover
+                filter: brightness(90%)
+
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+
+                color: black
+                @include hAndW(100%, 100%)
+
+    #submenu-open-button
+        position: relative
+
+        &::after
+            display: inline-block
+            position: relative
+            top: 0
+            right: -5px
+            content: ""
+
+            @include hAndW(4px, 4px)
+
+            border-top: 1.5px solid rgb(255, 255, 255)
+            border-right: 1.5px solid rgb(255, 255, 255)
+            transform: rotate(135deg)
+
+            transition: all 0.3s ease 0s
+
+        &:hover
+            filter: brightness(90%)
+
+        &.active
+            &::after
+                top: 1px
+                transform: rotate(-45deg)
+
+    &__submenu
+        display: none
+        height: 50px
+
+        background: gray
+
+        &.show
+            position: absolute
+            top: 100%
+            right: 0
+            display: flex
+
+        &.navmenu__list
+            li
+                &:hover
+                    filter: brightness(87%)
+
+                // a {
+                // }
+
+.logo
+    z-index: 5
+    height: 99%
+
+    img
+        @include hAndW(100%, 50px)
