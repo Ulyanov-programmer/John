@@ -174,5 +174,5 @@ If you have any questions or suggestions, write to me by email <a href="mailto:c
 
 </details>
 
-[этот сайт на GitHub Pages]: https://ulyanov-programmer.github.io/DefaultProject/DefaultProject
-[this site on GitHub Pages]: https://ulyanov-programmer.github.io/DefaultProject/DefaultProject
+[этот сайт на GitHub Pages]: https://ulyanov-programmer.github.io/John/John
+[this site on GitHub Pages]: https://ulyanov-programmer.github.io/John/John
