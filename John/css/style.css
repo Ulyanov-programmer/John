@@ -74,6 +74,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
+  color: black;
 }
 
 a:hover {
@@ -120,6 +121,11 @@ h6 {
           justify-content: flex-end;
   height: 50px;
   width: 95%;
+  margin: 0px 0px 100px 0px;
+}
+
+.navmenu {
+  font-size: calc(12px + 3 * ((100vw - 320px) / 530));
 }
 
 .navmenu__body {
@@ -154,11 +160,6 @@ h6 {
   transition: all 0.2s ease 0s;
 }
 
-.navmenu__list li:hover {
-  -webkit-filter: brightness(90%);
-          filter: brightness(90%);
-}
-
 .navmenu__list li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,6 +173,13 @@ h6 {
   color: black;
   height: 100%;
   width: 100%;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.navmenu__list li a:hover {
+  color: red;
 }
 
 .navmenu #submenu-open-button {
@@ -186,8 +194,8 @@ h6 {
   content: "";
   height: 4px;
   width: 4px;
-  border-top: 1.5px solid white;
-  border-right: 1.5px solid white;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -196,9 +204,11 @@ h6 {
   transition: all 0.3s ease 0s;
 }
 
-.navmenu #submenu-open-button:hover {
-  -webkit-filter: brightness(90%);
-          filter: brightness(90%);
+.navmenu #submenu-open-button::after:hover {
+  color: red;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .navmenu #submenu-open-button.active::after {
@@ -224,8 +234,8 @@ h6 {
 }
 
 .navmenu__submenu.navmenu__list li:hover {
-  -webkit-filter: brightness(87%);
-          filter: brightness(87%);
+  -webkit-filter: brightness(92%);
+          filter: brightness(92%);
 }
 
 .logo {
@@ -248,7 +258,7 @@ h6 {
   min-height: 180px;
   font-family: Heebo;
   color: black;
-  font-size: 15px;
+  font-size: calc(12px + 1 * ((100vw - 320px) / 530));
   line-height: 1;
 }
 
@@ -354,15 +364,7 @@ h6 {
 }
 
 .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
   color: white;
   font-family: "Lato";
   text-transform: uppercase;
@@ -384,15 +386,7 @@ h6 {
 }
 
 a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
 }
 
 .button-container {
@@ -456,24 +450,11 @@ body {
           flex-flow: column nowrap;
   height: 100%;
   color: black;
-  font-family: Roboto;
-}
-
-body.fixed {
-  overflow: hidden;
+  font-family: Heebo;
 }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100vh;
-          flex: 1 0 100vh;
   background: white;
 }
 
@@ -482,6 +463,120 @@ body.fixed {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   background: white;
+}
+
+.about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Heebo;
+}
+
+.about-me__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-me__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 16px;
+  padding: 0px 100px 0px 0px;
+}
+
+.about-me__info * {
+  padding: 0px 0px 40px 0px;
+}
+
+.about-me__info h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.about-me__info p {
+  line-height: 1.5;
+}
+
+.about-me__info a {
+  display: inline-block;
+  color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 10px 10px 10px;
+  background: #FF6464;
+}
+
+.about-me__image {
+  height: 250px;
+  width: 250px;
+}
+
+.about-me__image img {
+  height: 100%;
+  width: 100%;
+}
+
+.posts {
+  background: #EDF7FA;
+}
+
+.posts__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.posts__header {
+  height: auto;
+  width: 100%;
+  padding: 0px 0px 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.posts__header a {
+  color: #00A8CC;
+}
+
+.posts__header a:hover {
+  text-decoration: underline;
+}
+
+.post {
+  background: white;
+  width: 50%;
+}
+
+.block {
+  padding: 20px 10px 20px 10px;
+  margin: 0 auto;
 }
 
 @media (min-width: 1200px) {
@@ -510,6 +605,40 @@ body.fixed {
 
   .container {
     width: 95%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 850px) {
+  .header__body {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .about-me__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about-me__info {
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about-me__info * {
+    padding: 7px 0px 7px 0px;
+  }
+
+  .about-me__image {
+    text-align: center;
+    height: 180px;
+    width: 180px;
   }
 }
 

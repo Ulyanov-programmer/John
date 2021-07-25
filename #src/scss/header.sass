@@ -5,6 +5,7 @@ $maxWidth: 850
 .header
     display: flex
     justify-content: center
+
     color: black
     font-family: 'Heebo med'
 
@@ -16,10 +17,13 @@ $maxWidth: 850
         justify-content: flex-end
         @include hAndW(50px, 95%)
 
-        // background: $background 
-        // filter: brightness(110%) 
+        margin: 0px 0px 100px 0px
+
+        @media (min-width: 320px) and (max-width: $maxWidth + px)
+            margin: 0px 0px 0px 0px
 
 .navmenu
+    @include adaptiv-font (15,12)
     &__body
         display: flex
         height: 100%
@@ -40,9 +44,6 @@ $maxWidth: 850
             cursor: pointer
             transition: all 0.2s ease 0s
 
-            &:hover
-                filter: brightness(90%)
-
             a
                 display: flex
                 justify-content: center
@@ -50,6 +51,11 @@ $maxWidth: 850
 
                 color: black
                 @include hAndW(100%, 100%)
+
+                transition: all 0.2s ease 0s
+
+                &:hover
+                    color: red
 
     #submenu-open-button
         position: relative
@@ -63,14 +69,16 @@ $maxWidth: 850
 
             @include hAndW(4px, 4px)
 
-            border-top: 1.5px solid rgb(255, 255, 255)
-            border-right: 1.5px solid rgb(255, 255, 255)
+            border-top: 2px solid rgb(0, 0, 0)
+            border-right: 2px solid rgb(0, 0, 0)
             transform: rotate(135deg)
 
             transition: all 0.3s ease 0s
 
-        &:hover
-            filter: brightness(90%)
+            &:hover
+                color: red
+
+                transition: all 0.3s ease 0s
 
         &.active
             &::after
@@ -92,7 +100,7 @@ $maxWidth: 850
         &.navmenu__list
             li
                 &:hover
-                    filter: brightness(87%)
+                    filter: brightness(92%)
 
                 // a {
                 // }
