@@ -23,13 +23,20 @@ $maxWidth: 850
             margin: 0px 0px 0px 0px
 
 .navmenu
-    @include adaptiv-font (15,12)
+    @include adaptiv-font (15,15)
+
+    @media (max-width: 426px)
+        width: 100%
+
     &__body
         display: flex
         height: 100%
 
     &__list
         display: flex
+
+        @media (max-width: 426px)
+            flex: 1 0 auto
 
         li
             display: flex
@@ -43,6 +50,9 @@ $maxWidth: 850
 
             cursor: pointer
             transition: all 0.2s ease 0s
+
+            @media (max-width: 426px)
+                flex: 1 0 auto
 
             a
                 display: flex
@@ -91,6 +101,9 @@ $maxWidth: 850
 
         background: gray
 
+        @media (max-width: 426px)
+            height: 100px
+
         &.show
             position: absolute
             top: 100%
@@ -99,6 +112,9 @@ $maxWidth: 850
 
         &.navmenu__list
             li
+                @media (max-width: 426px)
+                        background: #d6d4d4;
+                
                 &:hover
                     filter: brightness(92%)
 

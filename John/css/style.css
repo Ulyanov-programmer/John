@@ -125,7 +125,7 @@ h6 {
 }
 
 .navmenu {
-  font-size: calc(12px + 3 * ((100vw - 320px) / 530));
+  font-size: calc(15px + 0 * ((100vw - 320px) / 530));
 }
 
 .navmenu__body {
@@ -595,6 +595,32 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
+  }
+}
+
+@media (max-width: 426px) {
+  .navmenu {
+    width: 100%;
+  }
+
+  .navmenu__list {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+
+  .navmenu__list li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+
+  .navmenu__submenu {
+    height: 100px;
+  }
+
+  .navmenu__submenu.navmenu__list li {
+    background: #d6d4d4;
   }
 }
 
