@@ -64,7 +64,7 @@ body
             padding: 0px 0px 40px 0px
 
         h1
-            font-weight: 700
+            font-family: $mainFontFamily + ' bold'
             font-size: 40px
 
         p
@@ -93,9 +93,12 @@ body
     &__body
         display: flex
         flex-flow: row wrap
+        justify-content: space-between
 
     &__header
         @include hAndW (auto, 100%)
+        @include adaptiv-font (16,14)
+
         padding: 0px 0px 15px 0px
 
         display: flex
@@ -107,14 +110,53 @@ body
                 text-decoration: underline
 
 .post
-    background: white
-    width: 50%
+    flex: 1 0 48%
+    @include adaptiv-font (15,13)
+
+    padding: 7px 7px 7px 7px
+
+    @media (max-width: 600px)
+        flex: 1 0 100%
 
     &__body
+        background: white
+        padding: 20px 20px 20px 20px
 
-        &__title
+    &__title
+        font-family: $mainFontFamily + ' bold'
+        margin: 0px 0px 20px 0px
+        @include adaptiv-font (23, 20)
 
-        &__tags
+    &__metadata
+        display: flex
+        align-items: center
+        margin: 0px 0px 15px 0px
+
+        line-height: 1.2
+
+    &__tags
+        display: inline-block
+        text-align: center
+        *
+            &:after
+                content: ','
+            &:last-child
+                &:after
+                    content: ''
+
+    &__date
+        padding: 0px 20px 0px 0px
+        margin: 0px 20px 0px 0px
+        border-right: 1.5px solid black
+
+        line-height: 1.2
+
+        @media (min-width: 320px) and (max-width: $maxWidth + px)
+            margin: 0px 10px 0px 0px
+            padding: 0px 10px 0px 0px
+
+    p
+        line-height: 1.5
 
 .works
 

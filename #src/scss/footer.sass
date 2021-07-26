@@ -10,11 +10,8 @@
     @include adaptiv-font (13,12)
     line-height: 1
 
-    // background: url("../images/footerBackground.webp") 0 0 / 100% 100% no-repeat;
-
     @media (max-width: 768px)
         flex: 1 0 auto
-        // background: none;
 
     &__body
         display: flex
@@ -34,22 +31,20 @@
         @media (max-width: 425px)
             width: 90%
 
-.contacts-block
-    margin: 0px 10px 0px 0px
-
-    &__list
-
-    &__item
-        a
-            
-
 .socials
     display: flex
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 20px 0px
 
     &__item
         @include hAndW(20px, 20px)
         margin: 0px 20px 0px 0px
 
+        @media (min-width: 426px) and (max-width: $maxWidth + px)
+            @include hAndW(25px, 25px)
+            margin: 0px 35px 0px 0px
+
     .twitter
         @include hAndW(20px, 26px)
+
+        @media (min-width: 426px) and (max-width: $maxWidth + px)
+            @include hAndW(25px, 31px)
