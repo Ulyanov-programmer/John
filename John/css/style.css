@@ -121,7 +121,7 @@ h6 {
           justify-content: flex-end;
   height: 50px;
   width: 95%;
-  margin: 0px 0px 100px 0px;
+  margin: 0px 0px 60px 0px;
 }
 
 .navmenu {
@@ -173,9 +173,9 @@ h6 {
   color: black;
   height: 100%;
   width: 100%;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.1s ease 0s;
+  -o-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
 }
 
 .navmenu__list li a:hover {
@@ -283,6 +283,14 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   margin: 0px 0px 40px 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 500px;
 }
 
 .socials a:last-of-type {
@@ -292,7 +300,7 @@ h6 {
 .socials__item {
   height: 20px;
   width: 20px;
-  margin: 0px 40px 0px 0px;
+  margin: 0px 40px 40px 0px;
 }
 
 .socials .twitter {
@@ -476,6 +484,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-family: Heebo;
+  padding: 10px 10px 50px 10px;
 }
 
 .about-me__body {
@@ -618,8 +627,16 @@ body {
 }
 
 .post__tags {
-  display: inline-block;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .post__tags *:after {
@@ -631,8 +648,6 @@ body {
 }
 
 .post__date {
-  padding: 0px 20px 0px 0px;
-  margin: 0px 20px 0px 0px;
   border-right: 1.5px solid black;
   line-height: 1.2;
 }
@@ -664,8 +679,8 @@ body {
 
 .work__image {
   height: 180px;
-  width: 250px;
-  min-width: 250px;
+  width: 246px;
+  min-width: 246px;
   min-height: 180px;
 }
 
@@ -728,6 +743,13 @@ body {
   margin: 0 auto;
 }
 
+@media (min-width: 720px) {
+  .post__date {
+    padding: 0px 20px 0px 0px;
+    margin: 0px 20px 0px 0px;
+  }
+}
+
 @media (min-width: 1200px) {
   .footer__body {
     width: 80%;
@@ -744,6 +766,16 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
+  }
+}
+
+@media (max-width: 721px) {
+  .post__tags {
+    width: 50%;
+  }
+
+  .post__date {
+    width: 50%;
   }
 }
 
@@ -796,7 +828,6 @@ body {
   .socials__item {
     height: 25px;
     width: 25px;
-    margin: 0px 35px 0px 0px;
   }
 
   .socials .twitter {
@@ -856,11 +887,6 @@ body {
     text-align: center;
     height: 180px;
     width: 180px;
-  }
-
-  .post__date {
-    margin: 0px 10px 0px 0px;
-    padding: 0px 10px 0px 0px;
   }
 }
 
