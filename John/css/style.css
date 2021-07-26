@@ -125,7 +125,7 @@ h6 {
 }
 
 .navmenu {
-  font-size: calc(15px + 0 * ((100vw - 320px) / 530));
+  font-size: calc(15px + 1 * ((100vw - 320px) / 530));
 }
 
 .navmenu__body {
@@ -282,18 +282,22 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 0px 20px 0px;
+  margin: 0px 0px 40px 0px;
+}
+
+.socials a:last-of-type {
+  margin: 0px 0px 0px 0px;
 }
 
 .socials__item {
   height: 20px;
   width: 20px;
-  margin: 0px 20px 0px 0px;
+  margin: 0px 40px 0px 0px;
 }
 
 .socials .twitter {
-  height: 20px;
-  width: 26px;
+  height: 30px;
+  width: 36px;
 }
 
 .form {
@@ -408,7 +412,7 @@ a {
   font-family: "Heebo black";
   font-display: swap;
   src: url("../fonts/Heebo-Black.woff") format("woff"), url("../fonts/Heebo-Black.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -416,7 +420,7 @@ a {
   font-family: "Heebo bold";
   font-display: swap;
   src: url("../fonts/Heebo-Bold.woff") format("woff"), url("../fonts/Heebo-Bold.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -424,7 +428,7 @@ a {
   font-family: "Heebo med";
   font-display: swap;
   src: url("../fonts/Heebo-Medium.woff") format("woff"), url("../fonts/Heebo-Medium.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -494,7 +498,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  font-size: 16px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 530));
   padding: 0px 100px 0px 0px;
 }
 
@@ -504,7 +508,7 @@ body {
 
 .about-me__info h1 {
   font-family: Heebo bold;
-  font-size: 40px;
+  font-size: calc(30px + 10 * ((100vw - 320px) / 530));
 }
 
 .about-me__info p {
@@ -519,6 +523,20 @@ body {
   width: max-content;
   padding: 10px 10px 10px 10px;
   background: #FF6464;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.about-me__info a:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  color: black;
+}
+
+.about-me__info a:active {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 
 .about-me__image {
@@ -623,6 +641,88 @@ body {
   line-height: 1.5;
 }
 
+.works__header {
+  padding: 0px 0px 20px 0px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 530));
+}
+
+.work {
+  padding: 20px 0px 20px 0px;
+  border-bottom: 2px solid #E0E0E0;
+  font-size: calc(14px + 1 * ((100vw - 320px) / 530));
+}
+
+.work:first-child {
+  padding-top: 0;
+}
+
+.work__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.work__image {
+  height: 180px;
+  width: 250px;
+  min-width: 250px;
+  min-height: 180px;
+}
+
+.work__image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.work__info {
+  max-width: 65%;
+  padding: 0px 0px 0px 20px;
+}
+
+.work__info * {
+  margin: 0px 0px 20px 0px;
+}
+
+.work__title {
+  font-family: Heebo bold;
+  font-size: calc(25px + 5 * ((100vw - 320px) / 530));
+}
+
+.work__tags {
+  display: inline-block;
+  text-align: center;
+}
+
+.work__tags *:after {
+  content: ', ';
+}
+
+.work__tags *:last-child:after {
+  content: '';
+}
+
+.work__date {
+  background: #21243D;
+  color: #fff;
+  font-family: 'Heebo black';
+  padding: 0px 7px 0px 7px;
+  margin: 0px 20px 0px 0px;
+  border-radius: 30px;
+}
+
+.work__type {
+  color: #8695A4;
+}
+
+.work p {
+  line-height: 1.3;
+}
+
+.work a {
+  text-align: left;
+}
+
 .block {
   padding: 20px 10px 20px 10px;
   margin: 0 auto;
@@ -653,6 +753,15 @@ body {
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
   }
+
+  .works__header {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .work__image {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 426px) {
@@ -679,6 +788,21 @@ body {
   .navmenu__submenu.navmenu__list li {
     background: #d6d4d4;
   }
+
+  .footer {
+    min-height: 100px;
+  }
+
+  .socials__item {
+    height: 25px;
+    width: 25px;
+    margin: 0px 35px 0px 0px;
+  }
+
+  .socials .twitter {
+    height: 25px;
+    width: 31px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -688,6 +812,16 @@ body {
 
   .container {
     width: 95%;
+  }
+}
+
+@media (max-width: 376px) {
+  .works__main article {
+    display: none;
+  }
+
+  .works__main article:first-child {
+    display: block;
   }
 }
 
@@ -742,23 +876,6 @@ body {
   }
 }
 
-@media (min-width: 426px) and (max-width: 850px) {
-  .socials__item {
-    height: 25px;
-    width: 25px;
-    margin: 0px 35px 0px 0px;
-  }
-
-  .socials .twitter {
-    height: 25px;
-    width: 31px;
-  }
-
-  .container {
-    width: 80%;
-  }
-}
-
 @media (min-width: 320px) and (max-width: 900px) {
   .form {
     -webkit-box-orient: horizontal;
@@ -778,8 +895,29 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 600px) {
+  .work__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    padding: 15px 0px 15px 0px;
+  }
+
+  .work__info {
+    padding: 20px 0px 0px 0px;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 850px) and (max-width: 1199px) {
   .container {
     width: 850px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 850px) {
+  .container {
+    width: 80%;
   }
 }

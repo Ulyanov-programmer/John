@@ -12,6 +12,9 @@
 
     @media (max-width: 768px)
         flex: 1 0 auto
+        
+    @media (max-width: 426px)
+        min-height: 100px
 
     &__body
         display: flex
@@ -33,18 +36,21 @@
 
 .socials
     display: flex
-    padding: 0px 0px 20px 0px
+    margin: 0px 0px 40px 0px
 
+    a:last-of-type
+        margin: 0px 0px 0px 0px
+    
     &__item
         @include hAndW(20px, 20px)
-        margin: 0px 20px 0px 0px
+        margin: 0px 40px 0px 0px
 
-        @media (min-width: 426px) and (max-width: $maxWidth + px)
+        @media (max-width: 426px)
             @include hAndW(25px, 25px)
             margin: 0px 35px 0px 0px
 
     .twitter
-        @include hAndW(20px, 26px)
+        @include hAndW(30px, 36px)
 
-        @media (min-width: 426px) and (max-width: $maxWidth + px)
+        @media (max-width: 426px)
             @include hAndW(25px, 31px)

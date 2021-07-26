@@ -48,7 +48,7 @@ body
         flex: 0 0 60%
         flex-flow: column nowrap
         justify-content: flex-start
-        font-size: 16px
+        @include adaptiv-font (16, 14)
 
         padding: 0px 100px 0px 0px
 
@@ -65,7 +65,7 @@ body
 
         h1
             font-family: $mainFontFamily + ' bold'
-            font-size: 40px
+            @include adaptiv-font (40, 30)
 
         p
             line-height: 1.5
@@ -76,6 +76,14 @@ body
             width: max-content
             padding: 10px 10px 10px 10px
             background: #FF6464
+
+            transition: all 0.2s ease
+
+            &:hover
+                filter: brightness(90%)
+                color: black
+            &:active
+                filter: brightness(100%)
 
     &__image
         @include hAndW(250px,250px)
@@ -159,23 +167,94 @@ body
         line-height: 1.5
 
 .works
-
     &__body
 
-        &__header
+    &__header
+        padding: 0px 0px 20px 0px
+        @include adaptiv-font (16,14)
+
+        @media (max-width: 600px)
+            text-align: center
+            padding: 0px 0px 0px 0px
+
+    &__main
+        @media (max-width: 376px)
+            article
+                display: none
+
+                &:first-child
+                    display: block
+            
+
 .work
+    padding: 20px 0px 20px 0px
+    border-bottom: 2px solid #E0E0E0
+    @include adaptiv-font (15, 14)
+
+    &:first-child
+        padding-top: 0
+
+    &__body
+        display: flex
+
+        @media (min-width: 320px) and (max-width: 600px)
+            flex-flow: column nowrap
+
+            padding: 15px 0px 15px 0px
 
     &__image
+        @include hAndW (180px, 250px)
+        min-width: 250px
+        min-height: 180px
 
-        &__info
+        @media (max-width: 600px)
+            margin: 0 auto
 
-        &__title
+        img
+            @include hAndW (100%, 100%)
+            border-radius: 5px
 
-        &__tags
+    &__info
+        max-width: 65%
+        padding: 0px 0px 0px 20px
 
-        &__date
+        @media (min-width: 320px) and (max-width: 600px)
+            padding: 20px 0px 0px 0px
+            max-width: 100%
 
-        &__type
+        *
+            margin: 0px 0px 20px 0px
+
+    &__title
+        font-family: $mainFontFamily + ' bold'
+        @include adaptiv-font (30, 25)
+
+    &__tags
+        display: inline-block
+        text-align: center
+        *
+            &:after
+                content: ', '
+            &:last-child
+                &:after
+                    content: ''
+
+    &__date
+        background: #21243D
+        color: #fff
+        font-family: 'Heebo black'
+
+        padding: 0px 7px 0px 7px
+        margin: 0px 20px 0px 0px
+        border-radius: 30px
+
+    &__type
+        color: #8695A4
+
+    p
+        line-height: 1.3
+    a
+        text-align: left
 
 .container
     @media (min-width: 1200px)
