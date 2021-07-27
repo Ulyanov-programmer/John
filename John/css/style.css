@@ -479,6 +479,13 @@ a {
   color: #8695A4;
 }
 
+.blog__title {
+  margin: 0px 0px 20px 0px;
+  line-height: 1.2;
+  font-size: calc(20px + 10 * ((100vw - 320px) / 530));
+  font-family: 'Heebo med';
+}
+
 .blog p {
   line-height: 1.5;
 }
@@ -524,6 +531,7 @@ a {
 
 .work-detail__tags * {
   padding: 0px 0px 0px 0px;
+  line-height: 1.2;
 }
 
 .work-detail__tags *:after {
@@ -726,7 +734,7 @@ body {
   font-family: Heebo bold;
   margin: 0px 0px 20px 0px;
   line-height: 1.2;
-  font-size: calc(20px + 3 * ((100vw - 320px) / 530));
+  font-size: calc(20px + 10 * ((100vw - 320px) / 530));
 }
 
 .post__title:hover {
