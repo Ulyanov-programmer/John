@@ -5,6 +5,7 @@
 @import "footer"
 @import "form"
 @import "fonts"
+@import "blog"
 // @import "iconFonts"
 
 $maxWidth: 850
@@ -22,6 +23,7 @@ body
 
 .main
     width: 100%
+    flex: 1 0 auto
 
     background: $background
 
@@ -35,7 +37,9 @@ body
     align-items: center
 
     font-family: $mainFontFamily
-    padding: 10px 10px 50px 10px
+
+    .block
+        padding: 5px 20px 50px 20px
 
     &__body
         display: flex
@@ -43,6 +47,7 @@ body
         @media (min-width: 320px) and (max-width: $maxWidth + px)
             flex-flow: column-reverse nowrap
             align-items: center
+            padding: 0px 0px 0px 0px
 
     &__info
         display: flex
@@ -108,7 +113,7 @@ body
         @include hAndW (auto, 100%)
         @include adaptiv-font (16,14)
 
-        padding: 0px 0px 15px 0px
+        padding: 0px 7px 15px 7px
 
         display: flex
         justify-content: space-between
@@ -136,6 +141,10 @@ body
         margin: 0px 0px 20px 0px
         @include adaptiv-font (23, 20)
 
+        &:hover
+            transition: all 0.2s ease
+            color: #e44848
+
     &__metadata
         display: flex
         align-items: center
@@ -147,15 +156,18 @@ body
         display: flex
         flex-flow: row wrap
         justify-content: center
+        padding: 0px 0px 0px 5px
 
         @media (max-width: 721px)
             width: 50%
         *
             &:after
                 content: ','
+                padding: 0px 5px 0px 0px
             &:last-child
                 &:after
                     content: ''
+                    padding: 0px 0px 0px 0px
 
     &__date
         border-right: 1.5px solid black
@@ -167,10 +179,12 @@ body
             margin: 0px 20px 0px 0px
 
         @media (max-width: 721px)
-            width: 50%
+            width: 30%
 
     p
         line-height: 1.5
+    a
+        text-align: left
 
 .works
     &__body

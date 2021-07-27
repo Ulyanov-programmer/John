@@ -125,7 +125,7 @@ h6 {
 }
 
 .navmenu {
-  font-size: calc(15px + 1 * ((100vw - 320px) / 530));
+  font-size: calc(16px + 0 * ((100vw - 320px) / 530));
 }
 
 .navmenu__body {
@@ -170,7 +170,6 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
   height: 100%;
   width: 100%;
   -webkit-transition: all 0.1s ease 0s;
@@ -179,6 +178,10 @@ h6 {
 }
 
 .navmenu__list li a:hover {
+  color: red;
+}
+
+.navmenu__list li a.active {
   color: red;
 }
 
@@ -256,6 +259,9 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 180px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   font-family: Heebo;
   color: black;
   font-size: calc(12px + 1 * ((100vw - 320px) / 530));
@@ -448,6 +454,43 @@ a {
   font-style: normal;
 }
 
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page__header {
+  font-family: "Heebo bold";
+  font-size: calc(30px + 14 * ((100vw - 320px) / 530));
+}
+
+.blog {
+  font-size: calc(13px + 2 * ((100vw - 320px) / 530));
+}
+
+.blog__body {
+  margin: 60px 0px 60px 0px;
+}
+
+.blog__tag {
+  color: #8695A4;
+}
+
+.blog p {
+  line-height: 1.5;
+}
+
+.post__title {
+  text-align: left;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,6 +506,9 @@ body {
 
 .main {
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   background: white;
 }
 
@@ -484,7 +530,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-family: Heebo;
-  padding: 10px 10px 50px 10px;
+}
+
+.about-me .block {
+  padding: 5px 20px 50px 20px;
 }
 
 .about-me__body {
@@ -579,7 +628,7 @@ body {
   height: auto;
   width: 100%;
   font-size: calc(14px + 2 * ((100vw - 320px) / 530));
-  padding: 0px 0px 15px 0px;
+  padding: 0px 7px 15px 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,6 +664,13 @@ body {
   font-size: calc(20px + 3 * ((100vw - 320px) / 530));
 }
 
+.post__title:hover {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #e44848;
+}
+
 .post__metadata {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -637,14 +693,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0px 0px 0px 5px;
 }
 
 .post__tags *:after {
   content: ',';
+  padding: 0px 5px 0px 0px;
 }
 
 .post__tags *:last-child:after {
   content: '';
+  padding: 0px 0px 0px 0px;
 }
 
 .post__date {
@@ -654,6 +713,10 @@ body {
 
 .post p {
   line-height: 1.5;
+}
+
+.post a {
+  text-align: left;
 }
 
 .works__header {
@@ -775,7 +838,7 @@ body {
   }
 
   .post__date {
-    width: 50%;
+    width: 30%;
   }
 }
 
@@ -825,6 +888,10 @@ body {
     min-height: 100px;
   }
 
+  .socials {
+    margin: 0px 0px 0px 0px;
+  }
+
   .socials__item {
     height: 25px;
     width: 25px;
@@ -833,6 +900,10 @@ body {
   .socials .twitter {
     height: 25px;
     width: 31px;
+  }
+
+  .blog__body {
+    margin: 25px 0px 30px 0px;
   }
 }
 
@@ -858,7 +929,7 @@ body {
 
 @media (min-width: 320px) and (max-width: 850px) {
   .header__body {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 30px 0px;
   }
 
   .about-me__body {
@@ -869,6 +940,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0px 0px 0px 0px;
   }
 
   .about-me__info {

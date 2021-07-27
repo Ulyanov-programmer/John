@@ -6,7 +6,9 @@
 })
 
 <body>
-    @@include('_header.html')
+    @@include('_header.html', {
+        "activeLink":"-1"
+    })
 
     <main class="main">
         <div class="main__body">
@@ -36,7 +38,9 @@
 
                     <article class="post">
                         <div class="post__body">
-                            <h2 class="post__title">Making a design system from scratch</h2>
+                            <a href="blog.html">
+                                <h2 class="post__title">Making a design system from scratch</h2>
+                            </a>
                             <div class="post__metadata">
                                 <span class="post__date">12 Feb 2020</span>
                                 <div class="post__tags">
@@ -53,8 +57,9 @@
                     </article>
                     <article class="post">
                         <div class="post__body">
-                            <h2 class="post__title">Creating pixel perfect icons in Figma</h2>
-
+                            <a href="blog.html">
+                                <h2 class="post__title">Creating pixel perfect icons in Figma</h2>
+                            </a>
                             <div class="post__metadata">
                                 <span class="post__date">12 Feb 2020</span>
                                 <div class="post__tags">
@@ -89,7 +94,7 @@
                                     <a href="works.html" target="_self" rel="noopener noreferrer">
                                         <h3 class="work__title">Designing Dashboards</h3>
                                     </a>
-                                    
+
                                     <span class="work__date">2020</span>
                                     <div class="work__tags">
                                         <span class="work__type">Dashboard</span>
