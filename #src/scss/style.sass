@@ -6,7 +6,7 @@
 @import "form"
 @import "fonts"
 @import "blog"
-@import "works"
+@import "wDetail"
 // @import "iconFonts"
 
 $maxWidth: 850
@@ -126,7 +126,7 @@ body
 
     padding: 7px 7px 7px 7px
 
-    @media (max-width: 600px)
+    @media (max-width: 650px)
         flex: 1 0 100%
 
     &__body
@@ -136,6 +136,7 @@ body
     &__title
         font-family: $mainFontFamily + ' bold'
         margin: 0px 0px 20px 0px
+        line-height: 1.2
         @include adaptiv-font (23, 20)
 
         &:hover
@@ -222,10 +223,10 @@ body
     &__image
         min-width: 246px
         min-height: 180px
-        max-height: 170px
+        max-height: 180px
 
         @media (max-width: 600px)
-            overflow: hidden
+            max-height: 100%
 
         img
             @include hAndW (100%, 100%)
@@ -251,22 +252,30 @@ body
             color: #e44848
 
     &__tags
-        display: inline-block
-        text-align: center
+        @include adaptiv-font (20, 14)
+        display: inline-flex
+        flex-flow: row wrap
+        justify-content: flex-start
+
         *
+            margin: 0px 0px 0px 0px
             &:after
-                content: ', '
+                display: inline-block
+                content: ','
+                padding: 0px 5px 5px 0px
             &:last-child
                 &:after
                     content: ''
 
     &__date
+        display: inline-block
         background: #21243D
         color: #fff
         font-family: 'Heebo black'
+        @include adaptiv-font (18, 14)
 
-        padding: 0px 7px 0px 7px
-        margin: 0px 20px 0px 0px
+        padding: 5px 7px 4px 7px
+        margin: 0px 20px 20px 0px
         border-radius: 30px
 
     &__type
@@ -285,6 +294,19 @@ body
         width: $maxWidth + px
 
     @media (min-width: 426px) and (max-width: $maxWidth + px)
+        width: 80%
+
+    @media (max-width: 425px)
+        width: 95%
+
+.second-container
+    @media (min-width: 1200px)
+        @include hAndW(auto, 80%)
+
+    @media (min-width: $maxWidth2 + px) and (max-width: 1199px)
+        width: $maxWidth2 + px
+
+    @media (min-width: 426px) and (max-width: $maxWidth2 + px)
         width: 80%
 
     @media (max-width: 425px)
