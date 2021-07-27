@@ -466,11 +466,6 @@ a {
           align-items: center;
 }
 
-.page__header {
-  font-family: "Heebo bold";
-  font-size: calc(30px + 14 * ((100vw - 320px) / 530));
-}
-
 .blog {
   font-size: calc(13px + 2 * ((100vw - 320px) / 530));
 }
@@ -562,11 +557,6 @@ body {
 
 .about-me__info * {
   padding: 0px 0px 40px 0px;
-}
-
-.about-me__info h1 {
-  font-family: Heebo bold;
-  font-size: calc(30px + 10 * ((100vw - 320px) / 530));
 }
 
 .about-me__info p {
@@ -725,8 +715,6 @@ body {
 }
 
 .work {
-  padding: 20px 0px 20px 0px;
-  border-bottom: 2px solid #E0E0E0;
   font-size: calc(14px + 1 * ((100vw - 320px) / 530));
 }
 
@@ -738,13 +726,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 20px 0px 20px 0px;
+  border-bottom: 2px solid #E0E0E0;
 }
 
 .work__image {
-  height: 180px;
-  width: 246px;
   min-width: 246px;
   min-height: 180px;
+  max-height: 170px;
 }
 
 .work__image img {
@@ -765,6 +754,13 @@ body {
 .work__title {
   font-family: Heebo bold;
   font-size: calc(25px + 5 * ((100vw - 320px) / 530));
+}
+
+.work__title:hover {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #e44848;
 }
 
 .work__tags {
@@ -804,6 +800,11 @@ body {
 .block {
   padding: 20px 10px 20px 10px;
   margin: 0 auto;
+}
+
+.title {
+  font-family: Heebo bold;
+  font-size: calc(30px + 10 * ((100vw - 320px) / 530));
 }
 
 @media (min-width: 720px) {
@@ -855,7 +856,7 @@ body {
   }
 
   .work__image {
-    margin: 0 auto;
+    overflow: hidden;
   }
 }
 

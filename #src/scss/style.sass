@@ -6,6 +6,7 @@
 @import "form"
 @import "fonts"
 @import "blog"
+@import "works"
 // @import "iconFonts"
 
 $maxWidth: 850
@@ -68,10 +69,6 @@ body
 
         *
             padding: 0px 0px 40px 0px
-
-        h1
-            font-family: $mainFontFamily + ' bold'
-            @include adaptiv-font (40, 30)
 
         p
             line-height: 1.5
@@ -206,8 +203,6 @@ body
                     display: block
 
 .work
-    padding: 20px 0px 20px 0px
-    border-bottom: 2px solid #E0E0E0
     @include adaptiv-font (15, 14)
 
     &:first-child
@@ -216,18 +211,21 @@ body
     &__body
         display: flex
 
+        padding: 20px 0px 20px 0px
+        border-bottom: 2px solid #E0E0E0
+
         @media (min-width: 320px) and (max-width: 600px)
             flex-flow: column nowrap
 
             padding: 15px 0px 15px 0px
 
     &__image
-        @include hAndW (180px, 246px)
         min-width: 246px
         min-height: 180px
+        max-height: 170px
 
         @media (max-width: 600px)
-            margin: 0 auto
+            overflow: hidden
 
         img
             @include hAndW (100%, 100%)
@@ -247,6 +245,10 @@ body
     &__title
         font-family: $mainFontFamily + ' bold'
         @include adaptiv-font (30, 25)
+
+        &:hover
+            transition: all 0.2s ease
+            color: #e44848
 
     &__tags
         display: inline-block
@@ -291,3 +293,7 @@ body
 .block
     padding: 20px 10px 20px 10px
     margin: 0 auto
+
+.title
+    font-family: $mainFontFamily + ' bold'
+    @include adaptiv-font (40, 30)
