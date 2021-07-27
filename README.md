@@ -1,5 +1,5 @@
-# Default Project
-Default Project - my standard project to start any layout. It will be gradually updated and supplemented, this is not the final version.
+# John
+John - personal website made on the basis of the design layout.
 
 <details>
  <summary>RU Описание</summary>
